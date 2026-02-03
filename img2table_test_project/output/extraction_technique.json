@@ -1,0 +1,145 @@
+{
+  "extraction_summary": {
+    "timestamp": "2026-02-03T00:43:40.110189",
+    "total_extractions": 1,
+    "image_analysis": [
+      {
+        "horizontal_lines": 10951,
+        "vertical_lines": 14520,
+        "estimated_rows": 10950,
+        "estimated_cols": 14519,
+        "image_shape": [
+          2354,
+          2560,
+          3
+        ]
+      }
+    ],
+    "methods_used": [
+      "img2table_structure_only"
+    ]
+  },
+  "technical_results": [
+    {
+      "method": "img2table_structure_only",
+      "table_id": 1,
+      "shape": {
+        "rows": 15,
+        "cols": 5
+      },
+      "bbox": {
+        "x1": 19,
+        "y1": 19,
+        "x2": 2583,
+        "y2": 2379
+      },
+      "data": [
+        {
+          "N°": "1",
+          "Nom de l'élève": "Kouassi Yao",
+          "Note /20": "15",
+          "Coefficient": "4",
+          "Note pondérée": "60"
+        },
+        {
+          "N°": "2",
+          "Nom de l'élève": "Traoré Aïcha",
+          "Note /20": "13",
+          "Coefficient": "4",
+          "Note pondérée": "52"
+        },
+        {
+          "N°": "3",
+          "Nom de l'élève": "Koné Ibrahim",
+          "Note /20": "18",
+          "Coefficient": "4",
+          "Note pondérée": "72"
+        },
+        {
+          "N°": "4",
+          "Nom de l'élève": "Bamba Fatou",
+          "Note /20": "11",
+          "Coefficient": "4",
+          "Note pondérée": "44"
+        },
+        {
+          "N°": "5",
+          "Nom de l'élève": "Diallo Moussa",
+          "Note /20": "14",
+          "Coefficient": "4",
+          "Note pondérée": "56"
+        },
+        {
+          "N°": "6",
+          "Nom de l'élève": "N'Guessan Marie",
+          "Note /20": "16",
+          "Coefficient": "4",
+          "Note pondérée": "64"
+        },
+        {
+          "N°": "7",
+          "Nom de l'élève": "Ouattara Karim",
+          "Note /20": "12",
+          "Coefficient": "4",
+          "Note pondérée": "48"
+        },
+        {
+          "N°": "8",
+          "Nom de l'élève": "Soro Aminata",
+          "Note /20": "17",
+          "Coefficient": "4",
+          "Note pondérée": "68"
+        },
+        {
+          "N°": "9",
+          "Nom de l'élève": "Koffi Junior",
+          "Note /20": "10",
+          "Coefficient": "4",
+          "Note pondérée": "40"
+        },
+        {
+          "N°": "10",
+          "Nom de l'élève": "Coulibaly Adama",
+          "Note /20": "19",
+          "Coefficient": "4",
+          "Note pondérée": "76"
+        },
+        {
+          "N°": "11",
+          "Nom de l'élève": "Touré Salif",
+          "Note /20": "14",
+          "Coefficient": "4",
+          "Note pondérée": "56"
+        },
+        {
+          "N°": "12",
+          "Nom de l'élève": "Zoungrana Esther",
+          "Note /20": "15",
+          "Coefficient": "4",
+          "Note pondérée": "60"
+        },
+        {
+          "N°": "13",
+          "Nom de l'élève": "Yapi Serge",
+          "Note /20": "13",
+          "Coefficient": "4",
+          "Note pondérée": "52"
+        },
+        {
+          "N°": "14",
+          "Nom de l'élève": "Bakayoko Rokia",
+          "Note /20": "16",
+          "Coefficient": "4",
+          "Note pondérée": "64"
+        },
+        {
+          "N°": "15",
+          "Nom de l'élève": "Fofana Mamadou",
+          "Note /20": "12",
+          "Coefficient": "4",
+          "Note pondérée": "48"
+        }
+      ]
+    }
+  ]
+}
