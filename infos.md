@@ -27,3 +27,47 @@ img2table_test_project/
 ├── output/
 │ ├── result.json
 │ └── result.csv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//nouvelle ligne
+
+
+Si je devais construire un système robuste, voici ma méthode étape par étape :
+1️⃣ Prétraitement des images / PDF
+Utiliser OpenCV pour :
+Redresser les images (correction de perspective)
+Améliorer contraste et luminosité
+Binarisation pour mieux faire ressortir le texte
+Convertir les PDF en images avec pdf2image
+Pourquoi : un OCR fonctionne beaucoup mieux si l’image est nette et contrastée.
+2️⃣ Détection de structure (tables, lignes, colonnes)
+Utiliser LayoutParser ou OpenCV pour détecter :
+Lignes horizontales → séparer les rangées d’élèves
+Lignes verticales → séparer les colonnes matières/notes
+Détecter automatiquement le “bloc tableau” sur l’image
+Cela permet à l’OCR de lire cellule par cellule, ce qui augmente la précision.
+3️⃣ Reconnaissance de texte
+Tesseract → pour texte imprimé
+Kraken ou TrOCR → pour manuscrit
+Faire un OCR cellule par cellule plutôt que toute l’image d’un coup
+Cela réduit énormément les erreurs et permet de relier correctement le texte à la colonne.
+4️⃣ Nettoyage et normalisation
+Utiliser Pandas + Regex pour :
+Supprimer espaces inutiles
+Corriger les caractères mal reconnus
+Convertir les notes en chiffres (int/float)
+Vérifier les valeurs incohérentes (ex : note > 20 ou < 0)
+5️⃣ Conversion en DataFrame / JSON / CSV

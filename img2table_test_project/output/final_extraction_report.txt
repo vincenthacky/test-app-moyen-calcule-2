@@ -3,7 +3,7 @@
 Méthode: img2table_simple
 Confiance: medium
 Dimensions: 25 x 10
-Timestamp: 2026-02-03T01:06:09.514597
+Timestamp: 2026-02-03T01:23:16.877593
 
 COLONNES DÉTECTÉES:
 
