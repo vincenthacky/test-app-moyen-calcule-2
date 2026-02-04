@@ -12,6 +12,7 @@ import logging
 from typing import Dict, List, Any, Optional, Union
 from datetime import datetime
 import csv
+from openpyxl.styles import Font
 
 class ExportService:
     """Service d'export vers formats multiples avec options avancées"""
@@ -166,15 +167,13 @@ class ExportService:
                 # Feuille principale avec données
                 df.to_excel(writer, sheet_name='Données', index=False)
 
-                # Obtenir le workbook et worksheet pour formatage
-                workbook = writer.book
+                # Obtenir le worksheet pour formatage
                 worksheet = writer.sheets['Données']
 
-                # Formatage des en-têtes
-                header_font = workbook.create_style()
+                # CORRECTION: Formatage des en-têtes avec openpyxl.styles.Font
                 for col in range(1, len(df.columns) + 1):
                     cell = worksheet.cell(row=1, column=col)
-                    cell.font = cell.font.copy(bold=True)
+                    cell.font = Font(bold=True)
 
                 # Auto-ajuster largeur colonnes
                 for column in worksheet.columns:

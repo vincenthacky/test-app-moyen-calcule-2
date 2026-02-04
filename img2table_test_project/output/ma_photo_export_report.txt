@@ -1,39 +1,55 @@
 === RAPPORT D'EXPORT DÉTAILLÉ ===
 
-Timestamp: 2026-02-04T10:55:16.141605
+Timestamp: 2026-02-04T11:44:08.391342
 Fichier source: unknown
 Méthode extraction: pipeline
-Score confiance: 0.42
+Score confiance: 0.31
 
 DIMENSIONS DU TABLEAU:
-  Lignes: 2
-  Colonnes: 13
-  Cellules totales: 26
+  Lignes: 72
+  Colonnes: 26
+  Cellules totales: 1872
 
 QUALITÉ DES DONNÉES:
 
 COLONNES DÉTECTÉES:
-  1: '00' (2 valeurs non-vides)
-  2: 'Colonne_1' (2 valeurs non-vides)
-  3: 'Colonne_2' (1 valeurs non-vides)
-  4: 'De R05e Cae A' (2 valeurs non-vides)
-  5: 'Colonne_4' (0 valeurs non-vides)
-  6: 'Colonne_5' (2 valeurs non-vides)
-  7: 'Colonne_6' (1 valeurs non-vides)
-  8: 'Colonne_7' (1 valeurs non-vides)
-  9: 'À:' (2 valeurs non-vides)
-  10: 'Amer Mm 0i' (1 valeurs non-vides)
-  11: 'Colonne_10' (2 valeurs non-vides)
-  12: 'Colonne_11' (1 valeurs non-vides)
-  13: 'A7e 08e mm me, ER CN EE ru mn qu: i cma' (2 valeurs non-vides)
+  1: 'Colonne_0' (33 valeurs non-vides)
+  2: 'Colonne_1' (24 valeurs non-vides)
+  3: 'Colonne_2' (22 valeurs non-vides)
+  4: 'Colonne_3' (22 valeurs non-vides)
+  5: 'Colonne_4' (25 valeurs non-vides)
+  6: 'Colonne_5' (31 valeurs non-vides)
+  7: 'Colonne_6' (25 valeurs non-vides)
+  8: 'Colonne_7' (32 valeurs non-vides)
+  9: 'Colonne_8' (34 valeurs non-vides)
+  10: '2' (25 valeurs non-vides)
+  11: 'Colonne_10' (34 valeurs non-vides)
+  12: 'Colonne_11' (24 valeurs non-vides)
+  13: '1É hee ay 05, R0UE5 1ee 5ay' (43 valeurs non-vides)
+  14: '1e 5e 1' (41 valeurs non-vides)
+  15: '5e5' (25 valeurs non-vides)
+  16: 'Colonne_15' (30 valeurs non-vides)
+  17: 'Colonne_16' (27 valeurs non-vides)
+  18: 'Colonne_17' (28 valeurs non-vides)
+  19: 'Colonne_18' (36 valeurs non-vides)
+  20: 'Colonne_19' (27 valeurs non-vides)
+  21: 'Colonne_20' (34 valeurs non-vides)
+  22: 'Eere Eur' (24 valeurs non-vides)
+  23: 'Colonne_22' (36 valeurs non-vides)
+  24: 'Pr Re5' (37 valeurs non-vides)
+  25: 'Colonne_24' (19 valeurs non-vides)
+  26: 'Colonne_25' (26 valeurs non-vides)
 
 ÉCHANTILLON DE DONNÉES (5 premières lignes):
-  1: ['a7 10 + a E7 NEED5 P5', 'À A à e6 cf e5 5', nan, '& e0', nan, '# 459 HE aq :', '8', '0k #4 Ÿ y5', 'à', nan, ';', '288', 'à']
-  2: ['Ee', '8 8 {', '48', '4', nan, '283', nan, nan, 'Qe 55', '4 4 i', '1', nan, 'Fe E Q']
+  1: [nan, nan, nan, '4', '1e Re 1e', 'Ae 8a A C0ne', nan, '5r Ne', 'yee 6e 5U ©', nan, 'P1 K5 0e', nan, 'Ae E8 5ue', nan, nan, nan, nan, nan, '88-', nan, nan, nan, '5e 15', 'CMR =e NE: PA ke 5ee 60RE Q7 1U5 a', nan, nan]
+  2: ['5a1e', nan, nan, nan, nan, nan, nan, nan, 'A Re57e', nan, nan, nan, 'Me Er Nd', nan, 'Re p5 EE ee 0r rr  re', nan, 'Um Ae Ee', nan, nan, nan, '1', '6E vue” 8ae', '= 8ee 0pe: x', '867 57! ‘8 ‘ye', nan, 'Af']
+  3: [nan, nan, '= 1A 8ee & AN5 6E Pa', 'CU: 5E1', nan, nan, '“ 5', nan, 'Aed', nan, nan, 'ae pane, 1e Pie 0ie5 EY', 'Pr', '1e Mire Da', 'A7i', nan, nan, nan, nan, nan, '— =? 0ry pa 5E ane nn a 5EN Ee, e6e7', nan, 'En 25 CCI 1E', 'Re 6ee 0ie', '= M7 e5', nan]
+  4: [nan, nan, nan, nan, nan, '1r Re5 7ic', nan, '5eu1', 'Ea A', 'Ee Ae', 'NE? UE', nan, 'A 7e', 'emi 8en Fe) 6e C5 :', 'Ae', 'Ee I5 8e5', nan, nan, 'Pain75', nan, ': 5R  ee PUR: 1e', nan, nan, '5i6e i75:', nan, 'Per Re Re 77e I6 M7 Un Je7']
+  5: ['na5: 0k R7E', nan, nan, nan, nan, '1', nan, nan, 'R7c In A', nan, nan, '. e0 EPA © D MD ee  P5 duc + Rd a R55 Pie Ai7 ee me &', 'Eee A1e', nan, 'Nn A', nan, 'Wee5', nan, 'EAU', 'Ni', nan, nan, '08', nan, nan, nan]
 
 FICHIERS EXPORTÉS:
-  CSV: output/ma_photo.csv (291 bytes)
-  JSON: output/ma_photo.json (1462 bytes)
-  EXCEL: output/ma_photo_fallback.csv (291 bytes)
+  CSV: output/ma_photo.csv (10997 bytes)
+  JSON: output/ma_photo.json (55404 bytes)
+  EXCEL: output/ma_photo.xlsx (17728 bytes)
 
 === FIN DU RAPPORT ===

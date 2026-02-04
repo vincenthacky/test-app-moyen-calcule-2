@@ -47,6 +47,8 @@ class StructureDetectionService:
         self.line_thickness_threshold = 2
         self.cell_min_size = 20
         self.merge_threshold = 10  # Distance pour fusionner lignes proches
+        self.min_column_distance = 120  # Distance minimale entre colonnes (évite bruit écran/papier)
+        self.min_row_distance = 35  # Distance minimale entre lignes horizontales
 
     def detect_table_structure(self, image_path: str) -> Optional[TableStructure]:
         """Point d'entrée principal: détecte la structure complète"""
@@ -71,6 +73,10 @@ class StructureDetectionService:
             # Nettoyer et fusionner les lignes
             horizontal_lines = self._clean_and_merge_lines(horizontal_lines, is_horizontal=True)
             vertical_lines = self._clean_and_merge_lines(vertical_lines, is_horizontal=False)
+
+            # CORRECTION: Filtrer les lignes trop proches (évite bruit écran/papier)
+            vertical_lines = self._filter_close_lines(vertical_lines, min_dist=self.min_column_distance)
+            horizontal_lines = self._filter_close_lines_horizontal(horizontal_lines, min_dist=self.min_row_distance)
 
             # Identifier les intersections et créer la grille
             cells = self._create_cell_grid(horizontal_lines, vertical_lines, img.shape)
@@ -165,14 +171,14 @@ class StructureDetectionService:
         # Préparation pour Hough
         edges = cv2.Canny(img, 50, 150, apertureSize=3)
 
-        # Hough Transform
+        # Hough Transform (seuils augmentés pour réduire faux positifs)
         lines = cv2.HoughLinesP(
             edges,
             rho=1,
             theta=np.pi/180,
-            threshold=100,
-            minLineLength=self.min_line_length,
-            maxLineGap=10
+            threshold=150,  # Seuil augmenté
+            minLineLength=self.min_line_length * 2,  # Longueur minimale doublée
+            maxLineGap=5  # Gap réduit
         )
 
         if lines is None:
@@ -232,6 +238,46 @@ class StructureDetectionService:
 
         merged.append(current_line)
         return merged
+
+    def _filter_close_lines(self, lines: List[Tuple[int, int, int, int]], min_dist: int = 40) -> List[Tuple[int, int, int, int]]:
+        """
+        Filtrer les lignes verticales trop proches les unes des autres.
+        Évite la sur-détection causée par le bruit de l'image (grain, écran).
+        """
+        if not lines:
+            return []
+
+        # Trier par position X
+        sorted_lines = sorted(lines, key=lambda l: l[0])
+
+        filtered = [sorted_lines[0]]
+        for line in sorted_lines[1:]:
+            # Garder seulement si la distance avec la dernière ligne est suffisante
+            if line[0] - filtered[-1][0] >= min_dist:
+                filtered.append(line)
+
+        self.logger.debug(f"🔧 Lignes verticales filtrées: {len(lines)} -> {len(filtered)}")
+        return filtered
+
+    def _filter_close_lines_horizontal(self, lines: List[Tuple[int, int, int, int]], min_dist: int = 25) -> List[Tuple[int, int, int, int]]:
+        """
+        Filtrer les lignes horizontales trop proches les unes des autres.
+        Évite la sur-détection des rangées.
+        """
+        if not lines:
+            return []
+
+        # Trier par position Y
+        sorted_lines = sorted(lines, key=lambda l: l[1])
+
+        filtered = [sorted_lines[0]]
+        for line in sorted_lines[1:]:
+            # Garder seulement si la distance avec la dernière ligne est suffisante
+            if line[1] - filtered[-1][1] >= min_dist:
+                filtered.append(line)
+
+        self.logger.debug(f"🔧 Lignes horizontales filtrées: {len(lines)} -> {len(filtered)}")
+        return filtered
 
     def _create_cell_grid(self, h_lines: List[Tuple[int, int, int, int]],
                          v_lines: List[Tuple[int, int, int, int]],

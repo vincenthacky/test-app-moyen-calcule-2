@@ -108,6 +108,8 @@ class PreprocessingService:
     def _correct_perspective(self, img: np.ndarray) -> np.ndarray:
         """Corriger la perspective si l'image est prise de biais"""
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        img_height, img_width = gray.shape[:2]
+        img_area = img_height * img_width
 
         # Détecter les contours pour trouver le document
         edges = cv2.Canny(gray, 50, 150, apertureSize=3)
@@ -119,6 +121,14 @@ class PreprocessingService:
 
         # Trouver le plus grand rectangle (probable document)
         largest_contour = max(contours, key=cv2.contourArea)
+        contour_area = cv2.contourArea(largest_contour)
+
+        # CORRECTION: Ne pas appliquer si le contour est trop petit (< 50% de l'image)
+        # Cela évite de cropper sur une petite zone détectée par erreur
+        min_area_ratio = 0.5
+        if contour_area < img_area * min_area_ratio:
+            self.logger.info(f"📐 Contour trop petit ({contour_area/img_area*100:.1f}% < 50%) - pas de correction perspective")
+            return img
 
         # Approximation polygonale
         epsilon = 0.02 * cv2.arcLength(largest_contour, True)

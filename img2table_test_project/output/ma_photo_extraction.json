@@ -1,0 +1,122 @@
+{
+  "source_file": "ma_photo.jpeg",
+  "extraction_timestamp": "2026-02-04T11:57:49.414228",
+  "ocr_engine": "easyocr",
+  "tables_count": 1,
+  "tables": [
+    {
+      "table_index": 1,
+      "rows": 14,
+      "columns": 5,
+      "headers": [
+        "Col_1",
+        "Nom de l'élève Kouassi Yao",
+        "Note /20 15",
+        "Coefficient 4",
+        "Note pondérée 60"
+      ],
+      "data": [
+        {
+          "Col_1": "2",
+          "Nom de l'élève Kouassi Yao": "Traoré Aïcha",
+          "Note /20 15": "13",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "52"
+        },
+        {
+          "Col_1": "3",
+          "Nom de l'élève Kouassi Yao": "Koné Ibrahim",
+          "Note /20 15": "18",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "72"
+        },
+        {
+          "Col_1": "4",
+          "Nom de l'élève Kouassi Yao": "Bamba Fatou",
+          "Note /20 15": "11",
+          "Coefficient 4": NaN,
+          "Note pondérée 60": "44"
+        },
+        {
+          "Col_1": "5",
+          "Nom de l'élève Kouassi Yao": "Diallo Moussa",
+          "Note /20 15": "14",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "56"
+        },
+        {
+          "Col_1": "6",
+          "Nom de l'élève Kouassi Yao": "N'Guessan Marie",
+          "Note /20 15": "16",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "64"
+        },
+        {
+          "Col_1": NaN,
+          "Nom de l'élève Kouassi Yao": "Ouattara Karim",
+          "Note /20 15": "12",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "48"
+        },
+        {
+          "Col_1": "8",
+          "Nom de l'élève Kouassi Yao": "Soro Aminata",
+          "Note /20 15": "17",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "68"
+        },
+        {
+          "Col_1": "9",
+          "Nom de l'élève Kouassi Yao": "Koffi Junior",
+          "Note /20 15": "10",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "40"
+        },
+        {
+          "Col_1": "10 11",
+          "Nom de l'élève Kouassi Yao": "Coulibaly Adama Touré Salif",
+          "Note /20 15": "19",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "76"
+        },
+        {
+          "Col_1": "10 11",
+          "Nom de l'élève Kouassi Yao": "Coulibaly Adama Touré Salif",
+          "Note /20 15": "14",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "56"
+        },
+        {
+          "Col_1": "12",
+          "Nom de l'élève Kouassi Yao": "Zoungrana Esther",
+          "Note /20 15": "15",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "60"
+        },
+        {
+          "Col_1": "13",
+          "Nom de l'élève Kouassi Yao": "Yapi Serge",
+          "Note /20 15": NaN,
+          "Coefficient 4": "4",
+          "Note pondérée 60": "52"
+        },
+        {
+          "Col_1": "14",
+          "Nom de l'élève Kouassi Yao": "Bakayoko Rokia",
+          "Note /20 15": "16",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "64"
+        },
+        {
+          "Col_1": "15",
+          "Nom de l'élève Kouassi Yao": "Fofana Mamadou",
+          "Note /20 15": "12",
+          "Coefficient 4": "4",
+          "Note pondérée 60": "48"
+        }
+      ],
+      "csv_file": "output/ma_photo_table_1.csv",
+      "excel_file": "output/ma_photo_table_1.xlsx"
+    }
+  ]
+}
