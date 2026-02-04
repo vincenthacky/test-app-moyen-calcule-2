@@ -1,100 +1,66 @@
-# 🧪 Projet Test img2table - Extraction de Tableaux
+# Extracteur de Tableaux
 
-Ce mini-projet teste la bibliothèque **img2table** pour extraire des tableaux à partir d'images et de PDFs, puis les convertir en pandas DataFrames et les exporter en JSON/CSV.
+Outil simple pour extraire des tableaux depuis des images ou PDFs.
 
-## 📁 Structure du projet
+## Installation
 
-```
-img2table_test_project/
-├── README.md               # Ce fichier
-├── requirements.txt        # Dépendances Python
-├── main.py                # Script principal
-├── sample_data/           # Données de test
-│   └── ma_photo.jpeg      # Image test avec tableau
-├── output/                # Résultats d'extraction
-│   ├── result.json        # Export JSON
-│   └── result.csv         # Export CSV
-└── venv/                  # Environnement virtuel
-```
-
-## 🚀 Installation et utilisation
-
-### 1. Créer l'environnement virtuel
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # Sur Windows: venv\Scripts\activate
-```
-
-### 2. Installer les dépendances
-```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 
-### 3. Lancer l'extraction
+## Utilisation
+
 ```bash
-python main.py
+# Extraction avec EasyOCR (recommandé)
+python simple_extractor.py mon_image.jpeg
+
+# Extraction avec Tesseract
+python simple_extractor.py mon_image.jpeg --ocr tesseract
+
+# Spécifier le dossier de sortie
+python simple_extractor.py mon_image.jpeg --output-dir resultats/
 ```
 
-## 📊 Ce que fait le script
+## Formats supportés
 
-1. **Détection automatique** des fichiers image (.jpg, .png) et PDF dans `sample_data/`
-2. **Extraction des tableaux** avec img2table
-3. **Conversion** en pandas DataFrame
-4. **Analyse** de la structure détectée (position, dimensions)
-5. **Export** en JSON et CSV dans le dossier `output/`
+**Entrée :** JPEG, PNG, PDF
 
-## 🔍 Résultats détaillés
+**Sortie :** CSV, Excel (.xlsx), JSON
 
-Le script affiche :
-- Nombre de tableaux détectés
-- Position et dimensions de chaque tableau
-- Aperçu des données extraites
-- Informations sur la conversion DataFrame
+## Exemple
 
-## 📝 Formats d'export
-
-### JSON
-```json
-{
-  "extraction_summary": {
-    "total_tables": 1,
-    "source_type": "image"
-  },
-  "tables": [
-    {
-      "table_id": 1,
-      "bbox": {"x1": 100, "y1": 150, "x2": 700, "y2": 450},
-      "shape": {"rows": 8, "cols": 5},
-      "data": [...]
-    }
-  ]
-}
+```bash
+python simple_extractor.py ma_photo.jpeg
 ```
 
-### CSV
-Données combinées de tous les tableaux en format tabulaire.
+Résultat :
+```
+📄 Extraction de: ma_photo.jpeg
+🔧 OCR: EasyOCR (français + anglais)
+🔍 Détection des tableaux...
+✅ 1 tableau(x) trouvé(s)
 
-## 🎯 Objectif d'évaluation
+📊 Tableau 1: 14 lignes × 5 colonnes
+💾 CSV: output/ma_photo_table_1.csv
+💾 Excel: output/ma_photo_table_1.xlsx
+📋 JSON: output/ma_photo_extraction.json
+```
 
-Ce projet permet d'évaluer si **img2table** convient pour une plateforme éducative de gestion de notes en testant :
+## Structure du projet
 
-- ✅ Précision de détection des tableaux
-- ✅ Qualité de l'extraction des cellules
-- ✅ Facilité d'intégration avec pandas
-- ✅ Format des données extraites
-- ✅ Performance sur différents types d'images
+```
+img2table_test_project/
+├── simple_extractor.py   # Script principal
+├── requirements.txt      # Dépendances
+├── sample_data/          # Images de test
+└── output/               # Résultats
+```
 
-## 🔧 Dépendances principales
+## Dépendances
 
-- **img2table** : Extraction de tableaux
-- **pandas** : Manipulation des données
-- **opencv-python** : Traitement d'images
-- **PyMuPDF** : Support PDF
-- **Pillow** : Gestion d'images
-
-## ⚠️ Notes techniques
-
-- OCR Tesseract est optionnel (fonctionne sans)
-- Le script traite la première page des PDFs
-- Les tableaux sans bordures sont supportés
-- Format de sortie compatible avec les workflows pandas
+- img2table
+- easyocr
+- pandas
+- openpyxl

@@ -1,0 +1,73 @@
+{
+  "source_file": "test2.png",
+  "extraction_timestamp": "2026-02-04T12:08:44.507437",
+  "ocr_engine": "easyocr",
+  "tables_count": 1,
+  "tables": [
+    {
+      "table_index": 1,
+      "rows": 6,
+      "columns": 6,
+      "headers": [
+        "N'",
+        "Nom",
+        "Prénom",
+        "Notel20",
+        "Coefficien",
+        "Note"
+      ],
+      "data": [
+        {
+          "N'": NaN,
+          "Nom": NaN,
+          "Prénom": NaN,
+          "Notel20": NaN,
+          "Coefficien": "t",
+          "Note": "pondérée"
+        },
+        {
+          "N'": NaN,
+          "Nom": "DIALLO",
+          "Prénom": "Moussa",
+          "Notel20": "15",
+          "Coefficien": "2",
+          "Note": "30"
+        },
+        {
+          "N'": "2",
+          "Nom": "TOURE",
+          "Prénom": "Awa",
+          "Notel20": "18",
+          "Coefficien": "3",
+          "Note": "54"
+        },
+        {
+          "N'": "3",
+          "Nom": "KONE",
+          "Prénom": "Issa",
+          "Notel20": "12",
+          "Coefficien": "2",
+          "Note": "24"
+        },
+        {
+          "N'": "4",
+          "Nom": "TRAORE",
+          "Prénom": "Fatou",
+          "Notel20": "14",
+          "Coefficien": "1",
+          "Note": "14"
+        },
+        {
+          "N'": "5",
+          "Nom": "COULIBAL",
+          "Prénom": "Amadou",
+          "Notel20": "16",
+          "Coefficien": "2",
+          "Note": "32"
+        }
+      ],
+      "csv_file": "output/test2_table_1.csv",
+      "excel_file": "output/test2_table_1.xlsx"
+    }
+  ]
+}
