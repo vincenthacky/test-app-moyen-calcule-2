@@ -145,6 +145,33 @@ class DataCleaningService:
             'g': '9'
         }
 
+    def clean_table_data(self, cell_contents: List[CellContent]) -> Dict[str, Any]:
+        """
+        Méthode principale pour nettoyer et structurer les données du tableau
+        Compatible avec le pipeline orchestrateur
+        """
+        # Nettoyer les cellules
+        cleaned_contents = self.clean_extracted_data(cell_contents)
+
+        # Structurer en DataFrame
+        df = self.validate_and_structure_data(cleaned_contents)
+
+        # Retourner format attendu par le pipeline
+        return {
+            'table_data': df.values.tolist() if not df.empty else [],
+            'headers': df.columns.tolist() if not df.empty else [],
+            'dataframe': df,
+            'confidence_score': self._calculate_confidence(cleaned_contents),
+            'correction_count': sum(1 for orig, clean in zip(cell_contents, cleaned_contents)
+                                   if orig.text != clean.text)
+        }
+
+    def _calculate_confidence(self, contents: List[CellContent]) -> float:
+        """Calculer score de confiance moyen"""
+        if not contents:
+            return 0.0
+        return sum(c.confidence for c in contents) / len(contents)
+
     def clean_extracted_data(self, cell_contents: List[CellContent]) -> List[CellContent]:
         """Nettoyer toutes les données extraites"""
         self.logger.info(f"🧹 Nettoyage de {len(cell_contents)} cellules")

@@ -1,0 +1,27 @@
+=== RAPPORT D'EXÉCUTION PIPELINE ===
+
+Fichier traité: sample_data/ma_photo.jpeg
+Succès: ✅ OUI
+Durée totale: 82.31s
+Timestamp: 2026-02-04T10:55:16.143068
+
+EXÉCUTION DES SERVICES:
+  ✅ preprocessing: 0.11s
+  ✅ structure_detection: 0.13s
+  ✅ ocr_extraction: 81.96s
+  ✅ data_cleaning: 0.02s
+  ✅ export: 0.09s
+
+FICHIERS CRÉÉS:
+  📄 csv: output/ma_photo.csv
+  📄 json: output/ma_photo.json
+  📄 excel: output/ma_photo_fallback.csv
+  📄 report: output/ma_photo_export_report.txt
+
+RÉSUMÉ EXTRACTION:
+  Lignes détectées: 2
+  Colonnes: 13
+  Score confiance: 0.42
+  Corrections appliquées: 12
+
+=== FIN RAPPORT ===

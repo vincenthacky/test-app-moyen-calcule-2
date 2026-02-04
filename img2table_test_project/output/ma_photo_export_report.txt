@@ -1,0 +1,39 @@
+=== RAPPORT D'EXPORT DÉTAILLÉ ===
+
+Timestamp: 2026-02-04T10:55:16.141605
+Fichier source: unknown
+Méthode extraction: pipeline
+Score confiance: 0.42
+
+DIMENSIONS DU TABLEAU:
+  Lignes: 2
+  Colonnes: 13
+  Cellules totales: 26
+
+QUALITÉ DES DONNÉES:
+
+COLONNES DÉTECTÉES:
+  1: '00' (2 valeurs non-vides)
+  2: 'Colonne_1' (2 valeurs non-vides)
+  3: 'Colonne_2' (1 valeurs non-vides)
+  4: 'De R05e Cae A' (2 valeurs non-vides)
+  5: 'Colonne_4' (0 valeurs non-vides)
+  6: 'Colonne_5' (2 valeurs non-vides)
+  7: 'Colonne_6' (1 valeurs non-vides)
+  8: 'Colonne_7' (1 valeurs non-vides)
+  9: 'À:' (2 valeurs non-vides)
+  10: 'Amer Mm 0i' (1 valeurs non-vides)
+  11: 'Colonne_10' (2 valeurs non-vides)
+  12: 'Colonne_11' (1 valeurs non-vides)
+  13: 'A7e 08e mm me, ER CN EE ru mn qu: i cma' (2 valeurs non-vides)
+
+ÉCHANTILLON DE DONNÉES (5 premières lignes):
+  1: ['a7 10 + a E7 NEED5 P5', 'À A à e6 cf e5 5', nan, '& e0', nan, '# 459 HE aq :', '8', '0k #4 Ÿ y5', 'à', nan, ';', '288', 'à']
+  2: ['Ee', '8 8 {', '48', '4', nan, '283', nan, nan, 'Qe 55', '4 4 i', '1', nan, 'Fe E Q']
+
+FICHIERS EXPORTÉS:
+  CSV: output/ma_photo.csv (291 bytes)
+  JSON: output/ma_photo.json (1462 bytes)
+  EXCEL: output/ma_photo_fallback.csv (291 bytes)
+
+=== FIN DU RAPPORT ===
